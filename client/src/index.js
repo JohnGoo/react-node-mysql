@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from './pages/app.js';
 
 import './style/common.css';
 import './style/aside.less';
@@ -16,8 +18,10 @@ import(
 });
 
 ReactDOM.render(
-  <Provider>
-  	
-  </Provider>,
+  // <Provider>
+  	<BrowserRouter>
+			<App />
+  	</BrowserRouter>,
+  // </Provider>,
   document.body.appendChild(document.createElement('div'))
 );
