@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Home, Roster, Schedule } from './component.js';
+import { Home, Roster, Schedule } from './component';
 
 export const Main = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from "./header.js";
-import { Main } from "./main.js";
+import { Header } from "./header";
+import { Main } from "./main";
 
 export const App = () => (
   <div>
