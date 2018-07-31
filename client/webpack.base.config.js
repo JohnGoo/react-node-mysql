@@ -14,8 +14,8 @@ module.exports = {
 	},
 	output: {
 		path: resolve('./dist'),
-    filename: '[name].[hash:4].js',
-    chunkFilename: 'chunks/[name].[hash:4].js',
+    filename: 'js/[name].[hash:4].js',
+    chunkFilename: 'js/[name].[hash:4].js',
 	},
 	resolve: {
     extensions: ['.js', '.json'],

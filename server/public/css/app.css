@@ -1,0 +1,10 @@
+body {
+	background-color: red;
+}
+.div {
+  font-size: 15px;
+}
+.div .span {
+  color: #aaa;
+}
+

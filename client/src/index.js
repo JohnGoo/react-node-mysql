@@ -23,7 +23,7 @@ ReactDOM.render(
   <Provider store={store}>
   	<BrowserRouter>
 			<App />
-  	</BrowserRouter>,
+  	</BrowserRouter>
   </Provider>,
   document.body.appendChild(document.createElement('div'))
 );

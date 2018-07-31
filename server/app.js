@@ -41,4 +41,4 @@ app.set('views', './views');
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile); // 默认只渲染ejs格式的文件，app.engine可指定渲染格式，相当于别名；
 // 静态文件
-app.use('/static', express.static('public'));
+app.use('/', express.static('public'));

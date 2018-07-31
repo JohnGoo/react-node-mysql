@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route, Link } from 'react-router-dom';
+
+import { isSuccess, isFail } from '../redux/actions/action';
 
 const PlayerAPI = {
 	data: [{
@@ -80,14 +83,35 @@ export const Roster = () => (
   </div>
 )
 
-export const Schedule = () => {
-  return (
-   	<div>
-	    <ul>
-	      <li>6/5 @ Evergreens</li>
-	      <li>6/8 vs Kickers</li>
-	      <li>6/14 @ United</li>
-	    </ul>
-	  </div>
-  )
+// export const Schedule = () => {
+//   return (
+//    	<div>
+// 	    <ul>
+// 	      <li>6/5 @ Evergreens</li>
+// 	      <li>6/8 vs Kickers</li>
+// 	      <li>6/14 @ United</li>
+// 	    </ul>
+// 	  </div>
+//   )
+// }
+
+@connect(state => ({ isSuccess: state.isSuccess }), dispatch => ({ onChechout: () => dispatch(isSuccess()) }))
+export class Schedule extends React.Component {
+	// constructor(props) {
+	// 	super(props);
+	// }
+	render() {
+		let { isSuccess, onChechout } = this.props;
+		return (
+			<div>
+		    <ul>
+		    	<li>{ isSuccess ? 1 : 0 }</li>
+		      <li>6/5 @ Evergreens</li>
+		      <li>6/8 vs Kickers</li>
+		      <li>6/14 @ United</li>
+		      <li><button onClick={onChechout}>chechout</button></li>
+		    </ul>
+		  </div>
+		)
+	}
 }
