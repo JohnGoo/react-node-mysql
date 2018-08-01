@@ -12,18 +12,18 @@ import './style/aside.less';
 // import config from './config/config.js';
 
 import(
-	/* webpackChunkName: "config" */
+  /* webpackChunkName: "config" */
   /* webpackMode: "lazy" */
-	'./config/config'
-	).then(_ => {
+  './config/config'
+).then(() => {
   // Do something with lodash (a.k.a '_')...
 });
 
 ReactDOM.render(
   <Provider store={store}>
-  	<BrowserRouter>
-			<App />
-  	</BrowserRouter>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.body.appendChild(document.createElement('div'))
 );
