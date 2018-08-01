@@ -9,11 +9,13 @@
     "build": "webpack --config ./webpack.prod.config.js",
     "lint": "eslint ./ --cache --ignore-pattern .gitignore",
     "mock": "supervisor -i node_modules mock/http.js",
-    "chat": "node ./scripts/chatServer.js"
+    "chat": "node ./scripts/chatServer.js",
+    "test": "jest"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -23,7 +25,8 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^1.0.0",
-    "eslint": "^5.2.0",
+    "enzyme": "^3.3.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-import": "^2.13.0",
@@ -31,6 +34,7 @@
     "eslint-plugin-react": "^7.10.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.4.2",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.1",
@@ -61,5 +65,18 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-thunk": "^2.2.0"
-  }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      ".*\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
 }
