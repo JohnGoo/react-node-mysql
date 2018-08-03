@@ -29,5 +29,8 @@ module.exports = {
     "react/jsx-one-expression-per-line": "off", // react单行限制
     "react/jsx-filename-extension": "off",  // react限制为jsx文件
     "react/forbid-prop-types": [0], // 禁止某些proptypes
+
+    "jsx-a11y/click-events-have-key-events": [0], // 强制键盘事件监听器
+    "jsx-a11y/no-noninteractive-element-interactions": [0], // 强制非交互元素监听器
   }
 }
